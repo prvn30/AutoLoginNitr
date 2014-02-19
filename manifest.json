@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Autologin",
+  "description": "Blah bhla.",
+  "version": "1.0",
+  "permissions": [
+    "http://192.168.1.250:8090/*",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://192.168.1.250:8090/*"],
+      "js": ["autologin.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "autologin.html"
+  }
+}
